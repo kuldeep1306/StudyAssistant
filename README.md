@@ -83,11 +83,11 @@ All code was reviewed, understood, and modified by me — I can walk through and
 ## Time Spent
 
 Approximately **[X] hours**, broken down roughly as:
-- Planning & setup: [X]h
-- AI integration & prompt design: [X]h
-- UI/UX (flashcards, quiz, states): [X]h
-- Error handling & edge cases: [X]h
-- Polish & README: [X]h
+- Planning & setup: 30min
+- AI integration & prompt design: 30min
+- UI/UX (flashcards, quiz, states): 20min
+- Error handling & edge cases: 30min
+- Polish & README: 20min
 
 ## What I'd Do Next (if given more time)
 
