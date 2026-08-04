@@ -89,11 +89,4 @@ Approximately **[X] hours**, broken down roughly as:
 - Error handling & edge cases: 30min
 - Polish & README: 20min
 
-## What I'd Do Next (if given more time)
-
-- [e.g., Add support for different block types (charts, checklists)]
-- [e.g., Stream AI responses instead of waiting for full JSON]
-- [e.g., Add a refinement loop — follow-up prompts to edit existing flashcards]
-- [e.g., Save/reload sessions with localStorage or a backend DB]
-- [e.g., Dark mode, animations, keyboard navigation]
 
