@@ -66,7 +66,7 @@ Since AI output is unpredictable, the app defends against:
 
 *(Be honest here — this counts in your favor per the assignment.)*
 
-I used [Claude / ChatGPT / Copilot / Cursor — *update this*] to help with:
+I used [Claude / ChatGPT ] to help with:
 - [e.g., scaffolding the initial component structure]
 - [e.g., drafting the prompt for structured JSON output]
 - [e.g., debugging the race-condition handling for stale API responses]
