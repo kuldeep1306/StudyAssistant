@@ -9,7 +9,15 @@ const REQUEST_TIMEOUT_MS = 30000;
 const MAX_INPUT_LENGTH = 8000;
 const MAX_INSTRUCTION_LENGTH = 500;
 
-app.use(cors());
+// Wide open by default (fine for local dev / grading). In production, set
+// CLIENT_ORIGIN to your deployed frontend URL (comma-separate for multiple)
+// to restrict which sites can call this API.
+const allowedOrigins = (process.env.CLIENT_ORIGIN || '')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean);
+
+app.use(cors(allowedOrigins.length ? { origin: allowedOrigins } : {}));
 app.use(express.json({ limit: '1mb' }));
 
 const JSON_SHAPE = `{
