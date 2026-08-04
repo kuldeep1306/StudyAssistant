@@ -7,6 +7,7 @@ export default function LoadingState() {
         <div className="shimmer-line w-50" />
       </div>
       <p>Reading your notes and building a deck…</p>
+      <div className="loading-spinner" aria-hidden="true" />
     </div>
   );
 }

@@ -90,7 +90,9 @@ export default function App() {
   const handleRefine = async (instruction) => {
     const result = await fetchRefinement(data, instruction);
     setData(result);
-    setActiveTab(result.flashcards.length > 0 ? 'flashcards' : activeTab);
+    setActiveTab(
+      result.flashcards.length > 0 ? 'flashcards' : result.quiz.length > 0 ? 'quiz' : activeTab
+    );
     setResultVersion((v) => v + 1);
   };
 
@@ -125,7 +127,9 @@ export default function App() {
           {status === STATUS.LOADING && <LoadingState />}
           {status === STATUS.ERROR && <ErrorState message={errorMessage} onRetry={handleGenerate} />}
           {status === STATUS.SUCCESS && data && (
-            <div className="results">
+            // key forces a fresh mount (and re-triggers the CSS entrance
+            // animation) whenever a new result set arrives.
+            <div className="results" key={`results-${resultVersion}`}>
               {restoredNotice && (
                 <p className="restored-banner">
                   Picked up where you left off.{' '}
@@ -156,10 +160,14 @@ export default function App() {
                 </div>
               )}
 
+              {/* key includes activeTab so switching tabs replays the
+                  fade-in-up entrance too, not just new generations */}
               {activeTab === 'flashcards' && hasFlashcards && (
-                <Flashcards key={`cards-${resultVersion}`} cards={data.flashcards} />
+                <Flashcards key={`cards-${activeTab}-${resultVersion}`} cards={data.flashcards} />
               )}
-              {activeTab === 'quiz' && hasQuiz && <Quiz key={`quiz-${resultVersion}`} questions={data.quiz} />}
+              {activeTab === 'quiz' && hasQuiz && (
+                <Quiz key={`quiz-${activeTab}-${resultVersion}`} questions={data.quiz} />
+              )}
 
               <RefinePanel onRefine={handleRefine} disabled={status !== STATUS.SUCCESS} />
 

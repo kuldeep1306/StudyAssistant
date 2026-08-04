@@ -37,6 +37,7 @@ export default function Flashcards({ cards }) {
         <div className="index-card peek peek-1" aria-hidden="true" />
 
         <div
+          key={index}
           className={`index-card flip-card ${flipped ? 'is-flipped' : ''}`}
           role="button"
           tabIndex={0}
