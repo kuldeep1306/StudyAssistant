@@ -80,7 +80,7 @@ No support for image-based notes — text input only
 
 ## Time Spent
 
-Approximately **[X] hours**, broken down roughly as:
+Approximately **[2] hours**, broken down roughly as:
 - Planning & setup: 30min
 - AI integration & prompt design: 30min
 - UI/UX (flashcards, quiz, states): 20min
