@@ -65,18 +65,18 @@ Since AI output is unpredictable, the app defends against:
 ## AI Usage Note
 
 I used [Claude / ChatGPT ] to help with:
-- [e.g., scaffolding the initial component structure]
-- [e.g., drafting the prompt for structured JSON output]
-- [e.g., debugging the race-condition handling for stale API responses]
+Scaffolding the initial component structure (notes input, flashcard view, quiz view, state management)
+Drafting the prompt for structured JSON output (converting raw notes into flashcard Q&A pairs and multiple-choice quiz questions)
+Debugging edge cases in parsing AI responses — handling malformed/inconsistent JSON when the model didn't strictly follow the schema
 
 All code was reviewed, understood, and modified by me — I can walk through and extend any part of it.
 
 ## Known Limitations
 
-- [e.g., Quiz supports only multiple-choice questions, not fill-in-the-blank]
-- [e.g., No persistence — refreshing the page clears current flashcards/quiz]
-- [e.g., Smaller/free-tier models occasionally produce inconsistent JSON on very long notes]
-- [Add/remove as applicable]
+Quiz supports only multiple-choice questions, not fill-in-the-blank or short answer
+No persistence — refreshing the page clears current flashcards/quiz session
+Smaller/free-tier models occasionally produce inconsistent JSON on very long notes, requiring a retry or manual fix
+No support for image-based notes — text input only
 
 ## Time Spent
 
