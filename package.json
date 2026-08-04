@@ -1,0 +1,17 @@
+{
+  "name": "study-assistant",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start": "concurrently -n server,client -c blue,magenta \"npm run start --workspace=server\" \"npm run dev --workspace=client\"",
+    "server": "npm run start --workspace=server",
+    "client": "npm run dev --workspace=client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
