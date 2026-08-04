@@ -64,8 +64,6 @@ Since AI output is unpredictable, the app defends against:
 
 ## AI Usage Note
 
-*(Be honest here — this counts in your favor per the assignment.)*
-
 I used [Claude / ChatGPT ] to help with:
 - [e.g., scaffolding the initial component structure]
 - [e.g., drafting the prompt for structured JSON output]
