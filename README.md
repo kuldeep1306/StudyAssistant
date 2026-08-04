@@ -97,8 +97,3 @@ Approximately **[X] hours**, broken down roughly as:
 - [e.g., Save/reload sessions with localStorage or a backend DB]
 - [e.g., Dark mode, animations, keyboard navigation]
 
-## Demo
-
-📹 [Link to screen recording]
-
-🌐 [Link to live deployment, if deployed]#
